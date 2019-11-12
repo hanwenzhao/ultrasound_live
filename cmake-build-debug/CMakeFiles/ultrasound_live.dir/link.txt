@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ultrasound_live.dir/main.cpp.o  -o ultrasound_live 
