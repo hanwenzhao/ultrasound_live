@@ -35,30 +35,32 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/hanwen/clion-2019.2.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/hanwen/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hanwen/ultrasound_live
+CMAKE_SOURCE_DIR = /Users/hanwen/Desktop/ultrasound_live
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hanwen/ultrasound_live/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/ultrasound_live.dir/all
+all: CMakeFiles/ultrasound_live_lib.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/ultrasound_live.dir/clean
+clean: CMakeFiles/ultrasound_live_lib.dir/clean
 
 .PHONY : clean
 
@@ -71,17 +73,17 @@ preinstall:
 # Target rules for target CMakeFiles/ultrasound_live.dir
 
 # All Build rule for target.
-CMakeFiles/ultrasound_live.dir/all:
+CMakeFiles/ultrasound_live.dir/all: CMakeFiles/ultrasound_live_lib.dir/all
 	$(MAKE) -f CMakeFiles/ultrasound_live.dir/build.make CMakeFiles/ultrasound_live.dir/depend
 	$(MAKE) -f CMakeFiles/ultrasound_live.dir/build.make CMakeFiles/ultrasound_live.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ultrasound_live"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ultrasound_live"
 .PHONY : CMakeFiles/ultrasound_live.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ultrasound_live.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ultrasound_live.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ultrasound_live.dir/rule
 
 # Convenience name for target.
@@ -93,6 +95,33 @@ ultrasound_live: CMakeFiles/ultrasound_live.dir/rule
 CMakeFiles/ultrasound_live.dir/clean:
 	$(MAKE) -f CMakeFiles/ultrasound_live.dir/build.make CMakeFiles/ultrasound_live.dir/clean
 .PHONY : CMakeFiles/ultrasound_live.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ultrasound_live_lib.dir
+
+# All Build rule for target.
+CMakeFiles/ultrasound_live_lib.dir/all:
+	$(MAKE) -f CMakeFiles/ultrasound_live_lib.dir/build.make CMakeFiles/ultrasound_live_lib.dir/depend
+	$(MAKE) -f CMakeFiles/ultrasound_live_lib.dir/build.make CMakeFiles/ultrasound_live_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target ultrasound_live_lib"
+.PHONY : CMakeFiles/ultrasound_live_lib.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ultrasound_live_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ultrasound_live_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ultrasound_live_lib.dir/rule
+
+# Convenience name for target.
+ultrasound_live_lib: CMakeFiles/ultrasound_live_lib.dir/rule
+
+.PHONY : ultrasound_live_lib
+
+# clean rule for target.
+CMakeFiles/ultrasound_live_lib.dir/clean:
+	$(MAKE) -f CMakeFiles/ultrasound_live_lib.dir/build.make CMakeFiles/ultrasound_live_lib.dir/clean
+.PHONY : CMakeFiles/ultrasound_live_lib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,3 +1,4 @@
-/home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles/ultrasound_live.dir
-/home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles/ultrasound_live.dir
+/Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles/ultrasound_live_lib.dir

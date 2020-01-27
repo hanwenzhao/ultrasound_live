@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/hanwen/clion-2019.2.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/hanwen/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hanwen/ultrasound_live
+CMAKE_SOURCE_DIR = /Users/hanwen/Desktop/ultrasound_live
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hanwen/ultrasound_live/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/hanwen/ultrasound_live/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/hanwen/clion-2019.2.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/hanwen/clion-2019.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles /home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanwen/ultrasound_live/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hanwen/Desktop/ultrasound_live/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,19 @@ ultrasound_live/fast:
 	$(MAKE) -f CMakeFiles/ultrasound_live.dir/build.make CMakeFiles/ultrasound_live.dir/build
 .PHONY : ultrasound_live/fast
 
+#=============================================================================
+# Target rules for targets named ultrasound_live_lib
+
+# Build rule for target.
+ultrasound_live_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ultrasound_live_lib
+.PHONY : ultrasound_live_lib
+
+# fast build rule for target.
+ultrasound_live_lib/fast:
+	$(MAKE) -f CMakeFiles/ultrasound_live_lib.dir/build.make CMakeFiles/ultrasound_live_lib.dir/build
+.PHONY : ultrasound_live_lib/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -130,6 +143,7 @@ main.o: main.cpp.o
 # target to build an object file
 main.cpp.o:
 	$(MAKE) -f CMakeFiles/ultrasound_live.dir/build.make CMakeFiles/ultrasound_live.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/ultrasound_live_lib.dir/build.make CMakeFiles/ultrasound_live_lib.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -139,6 +153,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) -f CMakeFiles/ultrasound_live.dir/build.make CMakeFiles/ultrasound_live.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/ultrasound_live_lib.dir/build.make CMakeFiles/ultrasound_live_lib.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -148,6 +163,7 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/ultrasound_live.dir/build.make CMakeFiles/ultrasound_live.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/ultrasound_live_lib.dir/build.make CMakeFiles/ultrasound_live_lib.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -156,9 +172,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... ultrasound_live"
+	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... ultrasound_live_lib"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
